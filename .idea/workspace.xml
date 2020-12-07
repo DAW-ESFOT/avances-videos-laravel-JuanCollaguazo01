@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3f75d67-db19-41cd-9197-9e1749f889f6" name="Default Changelist" comment="" />
+    <list default="true" id="f3f75d67-db19-41cd-9197-9e1749f889f6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +23,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -115,6 +121,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fca4pC7Y7GYOGqfNHhmTqUZVxt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -224,7 +231,8 @@
       <workItem from="1602517651901" duration="3766000" />
       <workItem from="1606185052217" duration="4148000" />
       <workItem from="1606254307625" duration="4385000" />
-      <workItem from="1606786562376" duration="2037000" />
+      <workItem from="1606786562376" duration="4997000" />
+      <workItem from="1607373966158" duration="717000" />
     </task>
     <servers />
   </component>
