@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Article extends Model
 {
-    public $fillable = ['title', 'body', 'category_id'];
+    public $fillable = ['title', 'body', 'category_id','image'];
 
     public static function boot()
     {
