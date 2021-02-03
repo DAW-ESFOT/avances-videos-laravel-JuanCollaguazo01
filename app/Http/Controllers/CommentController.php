@@ -6,7 +6,9 @@ use App\Article;
 use App\Comment;
 
 use App\Http\Resources\Comment as CommentResource;
+use App\Mail\NewComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CommentController extends Controller
 {
@@ -14,7 +16,7 @@ class CommentController extends Controller
      * Display a listing of the resource.
      *
      * @param Article $article
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index(Article $article)
     {
@@ -25,19 +27,19 @@ class CommentController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Comment  $comment
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show(Article $article,Comment $comment)
     {
         $comment = $article->comments()->where('id',$comment->id)->firstOrFail();
-        return response()->json($comment,200);
+        return response()->json(new CommentResource($comment),200);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request,Article $article)
     {
@@ -46,7 +48,8 @@ class CommentController extends Controller
         ]);
 
         $comment = $article->comments()->save(new Comment($request->all()));
-        return response()->json($comment,201);
+        Mail::to($article->user)->send(new NewComment($comment));
+        return response()->json(new CommentResource($comment),201);
     }
 
 
